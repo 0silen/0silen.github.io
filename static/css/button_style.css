@@ -1,0 +1,113 @@
+.button-container {
+    position: relative; /* 容器相对定位，以便按钮绝对定位相对于此容器 */
+}
+
+/* 公共按钮样式 */
+button {
+    position: absolute;
+    height: 60px;
+    width: 200px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: background 0.5s;
+}
+
+/* 今日运势 按钮样式 */
+.fortune-button {
+    scale: 200%;
+    top: 700px; /* 保持原来的位置 */
+    left: 360px;
+    background: #fa7199;
+    transform: translateX(-50%);
+}
+
+.fortune-button:hover {
+    background: linear-gradient(90deg, #ffa726, #ffeb3b, #ff9800, #ffa726);
+    background-size: 400%;
+}
+
+/* Bilibili 按钮样式 */
+.bilibili-button {
+    top: 350px; /* 保持原来的位置 */
+    left: 83%;
+    background: #fa7199;
+    transform: translateX(-50%);
+}
+
+.bilibili-button:hover {
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 400%;
+}
+
+/* GitHub 按钮样式 */
+.github-button {
+    top: 520px; /* 保持原来的位置 */
+    left: 83%;
+    background: #0e0464;
+    transform: translateX(-50%);
+}
+
+.github-button:hover {
+    background: linear-gradient(90deg, #fa7199, #f5ce62, #e43603, #fa7199);
+    background-size: 400%;
+}
+
+/* Luogu 按钮样式 */
+.luogu-button {
+    top: 690px; /* 保持原来的位置 */
+    left: 83%;
+    background: rgba(108, 190, 137, 0.72);
+    transform: translateX(-50%);
+}
+
+.luogu-button:hover {
+    background: linear-gradient(90deg, #fa7199, #f5ce62, #e43603, #fa7199);
+    background-size: 400%;
+}
+
+/* 共用的伪元素效果 */
+button:before {
+    content: '';
+    position: absolute;
+    background: inherit;
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+    border-radius: 50px;
+    filter: blur(20px);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+button:hover:before {
+    opacity: 1;
+    z-index: -1;
+}
+
+button:hover {
+    z-index: 1;
+    animation: glow 8s linear infinite;
+}
+
+@keyframes glow {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 400%;
+    }
+}
+
+.link-button {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
