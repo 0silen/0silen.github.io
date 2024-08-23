@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+<div class="background-image"
+     style="background-image: url('{{ url_for('static', filename='image/BBB.jpg') }}');"></div>
+{% block content %}
+    <h1>{% block title %} 一些牢骚 {% endblock %}</h1>
+    <div class="background-image"
+         style="background-image: url('{{ url_for('static',filename='image/Sirin.png') }}')">
+
+    </div>
+    <div class="content">
+        <body>
+        <p>本来打算把这个页面去掉来着，因为我不想在html上码太多字，还得自己打换行符，想想就很麻烦。</p>
+        <p>
+            但是看了一下别人的博客，大多数都是用html写的而不是markdown，于是我考虑拿html写一个页面敷衍一下.</p>
+
+        <p>绷不住了，才发现我现在几乎写不出什么东西了。</p>
+
+    </div>
+{% endblock %}
+
+
+
